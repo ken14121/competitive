@@ -150,6 +150,7 @@ section{padding:96px 0;border-top:1px solid var(--line);}
 .sec{display:grid;grid-template-columns:200px 1fr;gap:0 48px;}
 @media(max-width:960px){.sec{grid-template-columns:1fr;gap:26px;}}
 .sec-label{position:sticky;top:110px;align-self:start;}
+@media(max-width:960px){.sec-label{position:static;}}
 .sec-label .n{font-size:10px;letter-spacing:.2em;color:var(--ac);display:block;margin-bottom:8px;}
 .sec-label h2{font-size:22px;font-weight:600;letter-spacing:.05em;line-height:1.4;}
 .sec-label .en{font-size:9px;letter-spacing:.22em;color:var(--sub);margin-top:8px;display:block;}
@@ -162,6 +163,15 @@ section{padding:96px 0;border-top:1px solid var(--line);}
 .cards h3{font-size:15px;font-weight:600;margin:10px 0 10px;line-height:1.6;}
 .cards p{font-size:13px;color:#5a564f;line-height:1.95;}
 @media(max-width:860px){.cards{grid-template-columns:1fr;}}
+.poster{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center;margin-top:48px;padding-top:40px;border-top:1px solid var(--line);}
+.poster-img{display:block;border:1px solid var(--line);background:#fff;transition:.25s;}
+.poster-img img{display:block;width:100%;height:auto;}
+.poster-img:hover{transform:translateY(-3px);border-color:var(--ink);}
+.poster-txt .k{font-size:10px;letter-spacing:.2em;color:var(--ac);margin-bottom:8px;}
+.poster-txt h3{font-size:19px;font-weight:600;line-height:1.5;margin-bottom:8px;}
+.poster-txt p{font-size:13px;color:var(--sub);margin-bottom:20px;}
+.poster-txt small{display:block;font-size:11px;color:var(--sub);margin-top:10px;letter-spacing:.06em;}
+@media(max-width:640px){.poster{grid-template-columns:1fr;gap:22px;}.poster-img{max-width:240px;}}
 
 dl.spec{border-top:1px solid var(--hair);}
 dl.spec > div{display:grid;grid-template-columns:160px 1fr;gap:0 24px;padding:20px 0;border-bottom:1px solid var(--line);}
@@ -320,6 +330,16 @@ footer{border-top:1px solid var(--line);}
           <article><div class="n">02</div><h3>Googleフォームで<br>完結</h3><p>個人で応募。応募登録、作品提出はGoogleフォームで行います。</p></article>
           <article><div class="n">03</div><h3>企業と出会える<br>交流会</h3><p>二次審査の当日には協賛企業との交流会を開催。進路や仕事の話を直接聞くことができます。</p></article>
         </div>
+        <div class="poster">
+          <a class="poster-img" href="poster.pdf" target="_blank" rel="noopener"><img src="poster.jpg" width="1041" height="1461" loading="lazy" alt="高校生設計競技 2026-27 募集ポスター「コンペなのに『つくらない』」"></a>
+          <div class="poster-txt">
+            <div class="k">POSTER</div>
+            <h3>コンペなのに『つくらない』</h3>
+            <p>募集ポスター（A4・PDF）です。学校での掲示や配布にご利用ください。</p>
+            <a class="btn" href="poster.pdf" target="_blank" rel="noopener">ポスターを見る（PDF）</a>
+            <small>PDF・約1.1MB</small>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -333,6 +353,7 @@ footer{border-top:1px solid var(--line);}
           <div><dt>応募作品</dt><dd>授業や課題で取り組んだ設計作品。</dd></div>
           <div><dt>提出物</dt><dd>授業や課題で取り組んだ設計作品<br>（※デジタルデータにて提出）<br>・用紙サイズ、図面内容、表現内容については問わない</dd></div>
           <div><dt>応募方法</dt><dd>応募登録・作品提出ともにGoogleフォームより受付<br>・<a class="inline-link" href="https://forms.gle/mcup1A3jh1yTpLjW9" target="_blank" rel="noopener">応募登録フォームはこちら</a><br>・作品提出フォームは<span class="tbd">準備中</span>です。公開次第、本サイトおよび公式SNSでお知らせします。</dd></div>
+          <div><dt>ポスター</dt><dd><a class="inline-link" href="poster.pdf" target="_blank" rel="noopener">募集ポスター（PDF・約1.1MB）</a></dd></div>
         </dl>
       </div>
     </div>
