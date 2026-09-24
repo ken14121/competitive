@@ -130,6 +130,8 @@ body.nav-open #drawer{opacity:1;pointer-events:auto;}
   min-width:150px;height:42px;border:1px solid var(--line);background:#fffdfa;
   font-size:10px;color:#8d887c;letter-spacing:.16em;padding:0 18px;
 }
+.ticker span.has-logo{background:#fff;padding:0 14px;}
+.ticker span.has-logo img{display:block;max-height:26px;max-width:180px;width:auto;height:auto;object-fit:contain;}
 @keyframes slide{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
 /* ───────── 数字バンド ───────── */
@@ -463,12 +465,24 @@ footer{border-top:1px solid var(--line);}
 
 <script>
 const SPONSOR_LOGOS=[
-  'SPONSOR LOGO','PARTNER LOGO','COMPANY LOGO','SUPPORTER LOGO',
+  {name:'井上工業株式会社', img:'logo-inoue.png'},
+  'PARTNER LOGO','COMPANY LOGO','SUPPORTER LOGO',
   'SPONSOR LOGO','PARTNER LOGO','COMPANY LOGO','SUPPORTER LOGO'
 ];
 
-const row=SPONSOR_LOGOS.map(name=>'<span>'+name+'</span>').join('');
-document.getElementById('ticker').innerHTML=row+row;
+function logoBox(s){
+  const box=document.createElement('span');
+  if(typeof s==='string'){box.textContent=s;return box;}
+  box.className='has-logo';
+  const img=document.createElement('img');
+  img.src=s.img;img.alt=s.name;img.loading='lazy';
+  /* 画像が未設置ならプレースホルダー表示に戻す */
+  img.addEventListener('error',()=>{box.className='';box.textContent='SPONSOR LOGO';});
+  box.appendChild(img);
+  return box;
+}
+const tickerEl=document.getElementById('ticker');
+for(let i=0;i<2;i++)SPONSOR_LOGOS.forEach(s=>tickerEl.appendChild(logoBox(s)));
 
 document.getElementById('menuBtn').addEventListener('click',()=>document.body.classList.toggle('nav-open'));
 document.querySelectorAll('#drawer a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('nav-open')));
