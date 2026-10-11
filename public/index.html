@@ -276,6 +276,13 @@ ol.flow span{display:block;font-size:13px;color:var(--sub);}
 .contact-grid .v{font-size:15px;}
 .contact-grid .v small{display:block;font-size:12px;color:var(--sub);margin-top:6px;letter-spacing:.02em;}
 @media(max-width:640px){.contact-grid{grid-template-columns:1fr;}}
+.inquiry{margin-top:48px;scroll-margin-top:100px;}
+.inquiry-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px 24px;flex-wrap:wrap;margin-bottom:16px;}
+.inquiry-head h3{font-size:17px;font-weight:600;letter-spacing:.04em;}
+.inquiry-head p{font-size:13px;color:var(--sub);margin-top:4px;}
+.inquiry-head a{font-size:12px;letter-spacing:.06em;white-space:nowrap;}
+.inquiry-frame{border:1px solid var(--line);background:#fff;}
+.inquiry-frame iframe{display:block;width:100%;height:clamp(640px,85vh,1000px);border:0;}
 
 .tbd{color:#a8a299;border-bottom:1px dotted #c7c0b6;}
 .note{font-size:11px;color:var(--sub);margin-top:22px;line-height:1.95;letter-spacing:.02em;}
@@ -471,7 +478,7 @@ footer{border-top:1px solid var(--line);}
         </table>
         </div>
         <p class="note">※ 協賛金額および詳細につきましては、お問い合わせよりご連絡ください。</p>
-        <div style="margin-top:28px"><a class="btn" href="#contact">協賛について問い合わせる</a></div>
+        <div style="margin-top:28px"><a class="btn" href="#inquiry">協賛について問い合わせる</a></div>
       </div>
     </div>
     </div>
@@ -487,6 +494,18 @@ footer{border-top:1px solid var(--line);}
           <div><div class="k">E-MAIL</div><div class="v"><a class="inline-link" href="mailto:roperope675@gmail.com">roperope675@gmail.com</a></div></div>
           <div><div class="k">INSTAGRAM</div><div class="v"><a class="inline-link" href="https://www.instagram.com/r__rope/" target="_blank" rel="noopener">@r__rope</a></div></div>
           <div><div class="k">ENTRY FORM</div><div class="v"><a class="inline-link" href="https://forms.gle/mcup1A3jh1yTpLjW9" target="_blank" rel="noopener">応募登録フォーム</a><small>作品提出フォームは準備中です</small></div></div>
+        </div>
+        <div class="inquiry" id="inquiry">
+          <div class="inquiry-head">
+            <div>
+              <h3>お問い合わせフォーム</h3>
+              <p>協賛のご相談、ポスター・チラシの送付依頼、応募に関するご質問はこちらから。</p>
+            </div>
+            <a class="inline-link" href="https://docs.google.com/forms/d/e/1FAIpQLScUW2aPKwbCJL83u8RokZIjGGN1VIn__81li8V5keKIlY30SA/viewform" target="_blank" rel="noopener">フォームを新しいタブで開く</a>
+          </div>
+          <div class="inquiry-frame">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScUW2aPKwbCJL83u8RokZIjGGN1VIn__81li8V5keKIlY30SA/viewform?embedded=true" title="お問い合わせフォーム" loading="lazy">読み込んでいます…</iframe>
+          </div>
         </div>
       </div>
     </div>
